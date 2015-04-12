@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FileAttr` struct in crate `fuse`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FileAttr">
+
+    <title>fuse::FileAttr - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>fuse</a></p><script>window.sidebarCurrent = {name: 'FileAttr', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>fuse</a>::<wbr><a class='struct' href=''>FileAttr</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-12741' href='../src/fuse/lib.rs.html#66-95'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct FileAttr {
+    pub ino: <a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub size: <a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub blocks: <a href='http://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub atime: <a class='struct' href='../time/struct.Timespec.html' title='time::Timespec'>Timespec</a>,
+    pub mtime: <a class='struct' href='../time/struct.Timespec.html' title='time::Timespec'>Timespec</a>,
+    pub ctime: <a class='struct' href='../time/struct.Timespec.html' title='time::Timespec'>Timespec</a>,
+    pub crtime: <a class='struct' href='../time/struct.Timespec.html' title='time::Timespec'>Timespec</a>,
+    pub kind: <a class='enum' href='../fuse/enum.FileType.html' title='fuse::FileType'>FileType</a>,
+    pub perm: <a href='http://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>,
+    pub nlink: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub uid: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub gid: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub rdev: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub flags: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+}</pre><div class='docblock'><p>File attributes</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.ino'><a class='stability Unmarked' title='No stability level'></a><code>ino</code></td><td><div class='docblock'><p>Inode number</p>
+</div></td></tr><tr><td id='structfield.size'><a class='stability Unmarked' title='No stability level'></a><code>size</code></td><td><div class='docblock'><p>Size in bytes</p>
+</div></td></tr><tr><td id='structfield.blocks'><a class='stability Unmarked' title='No stability level'></a><code>blocks</code></td><td><div class='docblock'><p>Size in blocks</p>
+</div></td></tr><tr><td id='structfield.atime'><a class='stability Unmarked' title='No stability level'></a><code>atime</code></td><td><div class='docblock'><p>Time of last access</p>
+</div></td></tr><tr><td id='structfield.mtime'><a class='stability Unmarked' title='No stability level'></a><code>mtime</code></td><td><div class='docblock'><p>Time of last modification</p>
+</div></td></tr><tr><td id='structfield.ctime'><a class='stability Unmarked' title='No stability level'></a><code>ctime</code></td><td><div class='docblock'><p>Time of last change</p>
+</div></td></tr><tr><td id='structfield.crtime'><a class='stability Unmarked' title='No stability level'></a><code>crtime</code></td><td><div class='docblock'><p>Time of creation (OS X only)</p>
+</div></td></tr><tr><td id='structfield.kind'><a class='stability Unmarked' title='No stability level'></a><code>kind</code></td><td><div class='docblock'><p>Kind of file (directory, file, pipe, etc)</p>
+</div></td></tr><tr><td id='structfield.perm'><a class='stability Unmarked' title='No stability level'></a><code>perm</code></td><td><div class='docblock'><p>Permissions</p>
+</div></td></tr><tr><td id='structfield.nlink'><a class='stability Unmarked' title='No stability level'></a><code>nlink</code></td><td><div class='docblock'><p>Number of hard links</p>
+</div></td></tr><tr><td id='structfield.uid'><a class='stability Unmarked' title='No stability level'></a><code>uid</code></td><td><div class='docblock'><p>User id</p>
+</div></td></tr><tr><td id='structfield.gid'><a class='stability Unmarked' title='No stability level'></a><code>gid</code></td><td><div class='docblock'><p>Group id</p>
+</div></td></tr><tr><td id='structfield.rdev'><a class='stability Unmarked' title='No stability level'></a><code>rdev</code></td><td><div class='docblock'><p>Rdev</p>
+</div></td></tr><tr><td id='structfield.flags'><a class='stability Unmarked' title='No stability level'></a><code>flags</code></td><td><div class='docblock'><p>Flags (OS X only, see chflags(2))</p>
+</div></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../fuse/struct.FileAttr.html' title='fuse::FileAttr'>FileAttr</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../fuse/struct.FileAttr.html' title='fuse::FileAttr'>FileAttr</a></code></h3><div class='impl-items'></div><h3 class='impl'><a class='stability Stable' title='Stable'></a><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../fuse/struct.FileAttr.html' title='fuse::FileAttr'>FileAttr</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../fuse/struct.FileAttr.html' title='fuse::FileAttr'>FileAttr</a></code></h4>
+<h4 id='method.clone_from' class='method'><a class='stability Stable' title='Stable'></a><code>fn <a href='http://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "fuse";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
